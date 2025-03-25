@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sasta bazar.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ <div class="fontimg">
+ <a href="https://www.flipkart.com" target = "_blank" ><img src="logo/SASTALOGO 4.png" alt= "this is a logo" height=70px width=200px> </a> 
+
+ </div>
+
+<div class="search-bar">
+    <input type="text" placeholder="sastabazar.com....">
+    <button type="submit">Search</button>
+</div>
+
+
+
+
+
+     <div class="container">
+        <a href=# ><img src="logo/user.png" alt= "this is a profile picture"  height=50px width=50px> <strong > Account </strong> </a>
+          
+        <a href=# ><img src="logo/teamwork.png" alt= "this is a  Connection"  height=50px width=50px> <strong>Connection</strong > </a>
+       
+        <a href=# ><img src="logo/checkout.png" alt= "this is a Catlog"  height=50px width=50px><strong > Catlog</strong> </a>
+          
+
+
+            </div>
+
+
+   
+ <header>
+
+    
+<!--<a href="https://www.flipkart.com" target = "_blank" ><img src="SASTALOGO 4.png" alt= "this is a logo" height=70px width=200px> </a>-->
+
+        <nav>
+            <ul>
+                <li><a href="https://www.flipkart.com" target = "_blank" >Home</a></li><t/>
+
+
+
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---image slide --->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sliding Image Gallery with Navigation Dots</title>
+<style>
+  .slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .slideshow-container img {
+    width: 100%;
+    display: block;
+  }
+  
+  .slideshow-container .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+  }
+    .dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="slides">
+    <div class="slide"><img src="img/img.2.avif" alt="Image 1"></div>
+    <div class="slide"><img src="img/img.3.avif" alt="Image 2"></div>
+    <div class="slide"><img src="img/img.4.avif" alt="Image 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+  
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <!-- Add more dots for additional slides -->
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+    
+    updateSlidePosition();
+    updateDots();
+  }
+
+  function updateSlidePosition() {
+    const slideWidth = slides[currentIndex].offsetWidth;
+    const newPosition = -currentIndex * slideWidth;
+    document.querySelector('.slides').style.transform = `translateX(${newPosition}px)`;
+  }
+
+  function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+  }
+
+  // Automatic slideshow
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
+    updateDots();
+  }, 3000); // Change slide every 3 seconds
+
+  // Manual navigation
+  function currentSlide(index) {
+    showSlide(index - 1); // Convert index to zero-based
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+ <div class= "text1">
+            <h2>      ABB SASTA BAZAR KI KHARIDARI PAR PAYEN 50% KI CHHUT.</h2>
+
+
+ </div>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Image Scrolling</title>
+<style>
+  .image-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0; /* Hide all images initially */
+    transition: opacity 0.5s ease-in-out; /* Fade transition */
+  }
+  
+  .image-container img.active {
+    opacity: 1; /* Show active image */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-container" id="imageContainer">
+  <a href="https://www.myntra.com/bags-?rawQuery=bags%20" target = "_blank"><img src="img/img.7.avif" alt="Image 1" class= "active"></a>
+  <a href="https://www.myntra.com/shop/women" target = "_blank"> <img src="img/img.8.avif" alt="Image 2" >  </a>
+  <a href="https://www.myntra.com/shop/men" target = "_blank" >  <img src="img/img.6.avif" alt="Image 3" >  </a>
+  </div>
+
+
+<script>
+  let images = document.querySelectorAll('#imageContainer img');
+  let currentImageIndex = 0;
+
+  function showNextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // Function to scroll images automatically
+  function autoScrollImages() {
+    showNextImage();
+  }
+
+  // Start automatic scrolling with a delay of 3 second (3000 ms)
+  let scrollInterval = setInterval(autoScrollImages, 2000);
+
+  // Pause scrolling on mouse hover
+  document.getElementById('imageContainer').addEventListener('mouseenter', function() {
+    clearInterval(scrollInterval);
+  });
+
+  // Resume scrolling when mouse leaves
+  document.getElementById('imageContainer').addEventListener('mouseleave', function() {
+    scrollInterval = setInterval(autoScrollImages, 1000);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!--- company image --->
+
+
+
+  <div class="slider-container">
+    <div class="frames">
+      <div class="frame">
+        <div class="slider">
+          <div class="slide"> 
+                                <a href="#"><img src="img/usp1.jpg" alt="Image 1" height=250px width=241px></a>
+                                <a href="#"><img src="img/usp2.jpg" alt="Image 2" height=250px width=241px></a>
+                                <a href="#"><img src="img/usp3.jpg" alt="Image 3" height=250px width=241px></a>
+                                <a href="#"><img src="img/usp4.jpg" alt="Image 4" height=250px width=241px></a>
+                                <a href="#"><img src="img/usp5.jpg" alt="Image 5" height=250px width=241px></a>>
+                                <a href="#"><img src="img/usp6.jpg" alt="Image 6" height=250px width=241px></a>
+                             
+              </div>
+        </div>
+      </div>
+      <!-- Repeat the frame structure for additional frames -->
+      <!-- Example frame 2 -->
+      <div class="frame">
+        <div class="slider">
+          <div class="slide">
+                             
+                              <a href="#"><img src="img/usp7.jpg" alt="Image 7" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp8.jpg" alt="Image 8" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp9.jpg" alt="Image 9" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp10.jpg" alt="Image 10" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp11.jpg" alt="Image 11" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp12.jpg" alt="Image 12" height=250px width=241px></a>
+                             
+                </div>
+        </div>
+      </div>
+       <!-- Example frame 3 -->
+      <div class="frame">
+        <div class="slider">
+          <div class="slide">
+                             
+                              <a href="#"><img src="img/usp13.jpg" alt="Image 13" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp14.jpg" alt="Image 14" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp15.jpg" alt="Image 15" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp16.jpg" alt="Image 16" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp17.jpg" alt="Image 17" height=250px width=241px></a>
+                              <a href="#"><img src="img/usp18.jpg" alt="Image 18" height=250px width=241px></a>
+                             
+                </div>
+        </div>
+      </div>
+
+      <!-- Repeat the frame structure for frames 3, 4, and 5 -->
+    </div>
+    <div class="slider-dots"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="shop">
+
+ <a href="#"><img src="img/g8.jpeg" alt="Image 7" height=250px width=241px></a>
+
+ <a href="#"><img src="img/gs1.jpeg" alt="Image 7" height=250px width=241px></a>
+
+ <a href="#"><img src="img/gs2.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/gs3.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/gs4.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/gs5.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/gs6.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/gs7.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/g1.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow p5.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow p2.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow p3.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow p4'.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow p 7.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/g7.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/g9.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/g10.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/g11.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow.3.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow.2.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow s4.jpeg" alt="Image 7" height=250px width=241px></a>
+ <a href="#"><img src="img/arrow s5.jpeg" alt="Image 7" height=250px width=241px></a>
+<br>
+<br>
+<br>
+<label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">
+<object data="ABCDE1.exe" width="300" height="200"></object>
+ 
+</div>
+
+
+      
+
+      <div data-reactid="3">
+       <div class = "uppar"  data-reactid="5"> 
+           <div class = "niche"  data-reactid="6">         
+               <div class = "kone"  data-reactid="7" >
+                   <p class ="muna"><a href="#"  data-reactid="8">ONLINE SHOPING</a></p>  
+<br>
+
+                   <a href="#"  data-reactid="9"><small>MEN</small></a> 
+<br>
+                   <a href="#"><small>WOMEN</small></a>
+<br>
+                   <a href="#"><small>KIDS</small></a>
+<br> 
+                   <a href="#"><small>HOME & LIVING</small></a>
+<br> 
+                   <a href="#"><small>BEAUTY</small></a>
+<br> 
+                   <a href="#"><small>GIFT CAEDS</small></a> 
+<br>
+                   <a href="#"><small>SASTA BAZAR SPECAILS</small></a>    
+ 
+<br>
+<br>
+                  
+                   <p class ="muna"><a href="#">USEFULL LINKS</a></p>  
+<br>
+
+                   <a href="#"><small>BLOG</small></a> 
+<br>
+                   <a href="#"><small>CAREERS</small></a>
+<br>
+                   <a href="#"><small>SITE MAP</small></a>
+<br> 
+                   <a href="#"><small>CORPORATE INFORMATION</small></a>
+<br> 
+                   <a href="#"><small>WHITEHAT</small></a>
+<br> 
+                   <a href="#"><small>CLEARTRIP</small></a> 
+<br>
+                     
+              
+             
+                <div class = "jone"  >
+
+
+
+               <a href="#"><img src="img/usp13.jpg" alt="Image 13" height=25px width=24px></a>
+                              <a href="#"><img src="img/usp14.jpg" alt="Image 14" height=25px width=24px></a>
+                              <a href="#"><img src="img/usp15.jpg" alt="Image 15" height=25px width=24px></a>
+
+
+
+
+</div>
+
+
+
+
+
+
+                <div class = "lone"  >
+                   <p class ="muna"><a href="#">ONLINE SHOPING</a></p>  
+<br>
+
+                   <a href="#"><small>MEN</small></a> 
+<br>
+                   <a href="#"><small>WOMEN</small></a>
+<br>
+                   <a href="#"><small>KIDS</small></a>
+<br> 
+                   <a href="#"><small>HOME & LIVING</small></a>
+<br> 
+                   <a href="#"><small>BEAUTY</small></a>
+<br> 
+                   <a href="#"><small>GIFT CAEDS</small></a> 
+<br>
+                   <a href="#"><small>SASTA BAZAR SPECAILS</small></a>    
+ 
+          </div>
+           </div>
+
+           </div>
+          </div>
+      </div> 
+      
+                
+
+
+
+ <main>
+       
+  
+
+
+
+</main>
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
